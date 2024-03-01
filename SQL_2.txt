@@ -1,0 +1,44 @@
+Sr no.	Questions		Revision1
+1	find out name of employee along with employee_id for whom gender is not available		"SELECT EMP_name,EMP_id from employee
+WHERE gender IS NULL;"
+
+2	change the surname of emp_id=5 to 'patil'		"UPDATE employee
+SET EMP_surname='patil'
+WHERE EMP_id=5;"
+
+3	we have entered wrong enrty with null gender please remove that records		"DELETE from employee
+WHERE gender IS NULL;"
+
+4	delete all data from the table where emp_id is 102 or 103		"DELETE from employee
+WHERE EMP_id IN (102,103);"
+
+5	difference between delete and truncate		"DELETE:- it is DML command.
+It is used to remove one or more record from table.
+Records can be rolledback.
+It uses WHERE clause in it.
+
+TRUNCATE:- it is DDL command.
+It is deleting all data but by creating table structure.
+Records cannot be rolledback.
+it does not uses WHERE clause."
+
+
+6	Find employess whoes name contain character 's'		"SELECT * from employee
+WHERE EMP_name LIKE '%s%';"
+
+
+7	Find all employeess whoes SAL is between 10000 to100000		"SELECT * from employee
+WHERE EMP_sal between 10000 and 100000;"
+
+
+8	Why Truncate is DDL commond		It deletes entier data but by recreating table structure. It is structure related command hence it is DDL 
+
+
+9	Gives how many males and females we have?		SELECT count(*) from employee;
+
+
+10	We want to create new employee detail table structure,for that we need to remove existing structure		DROP table employee;
+
+
+11	Remove all data from table (with delete and truncate)		"DELETE from employee;  
+TRUNCATE table employee;"

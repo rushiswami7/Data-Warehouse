@@ -1,0 +1,43 @@
+Sr no.	Questions		Answers
+1	Find out the employee details whoes sal is maximum		"SELECT * from emp
+WHERE emp_sal=(SELECT max(emp_sal) from emp)"
+
+
+2	Find the name of employee from pune and earning the heighest salary		"SELECT * from emp
+WHERE emp_sal=(SELECT max(emp_sal) from emp
+WHERE city='pune');"
+
+
+3	Find the name of employee from UP and earning the lowest salary		"SELECT * from emp
+WHERE emp_sal=(SELECT min(emp_sal) from emp
+WHERE state='UP');"
+
+
+4	Find name and salary whoes emp_id is highest		"SELECT name, emp_sal from emp
+WHERE emp_id=(SELECT max(emp_id) from emp);
+
+
+"
+5	find the details of female employee whoes sal is min and state is MH		"SELECT * from emp
+WHERE gender='f' and emp_sal=(select min(emp_sal) from emp where state= 'MH' and gender='f');
+"
+
+
+6	Find details of employee whoes sal is higher than the avg salary		"SELECT * from emp
+WHERE emp_sal > (select avg(emp_sal) from emp);"
+
+
+7	Change the surname of employee to 'TATA' who is earning max sal		"Update emp
+set surname='TATA'
+where emp_sal=(select max(emp_sal) from emp);"
+
+
+8	remove the records whoes salary is lowest		"Delete from emp
+where emp_sal=(select min(emp_sal) from emp);"
+
+
+9	Find details of employee whoes sal is lower than the avg salary		"SELECT * from emp
+WHERE emp_sal < (select avg(emp_sal) from emp);"
+
+
+10	Find the details of employee with higher salary as per state		

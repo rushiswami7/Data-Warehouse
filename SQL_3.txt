@@ -1,0 +1,39 @@
+Sr no.	Questions		Revision1
+1	Delete entire data from a table		DELETE from employee;
+
+2	change the datatype of emp_id from integer to varchar2(20)		ALTER table employee modify emp_id varchar2(20);
+
+
+3	Delete all the data from table whoes gender is not available		"DELETE from employee
+WHERE gender IS NULL;"
+
+
+4	Change the name of column from emp_id to employee_id		ALTER table employee Rename column emp_id To employee_id;
+
+
+5	Find out the data whoes surname start with 's'		"SELECT * from employee
+WHERE surname LIKE 's%';"
+
+
+6	Find the records whoes Emp_id is more than 100		"SELECT * from employee
+WHERE employee_id>100;"
+
+
+7	find out the departments under whom we have more than 5 employee		"SELECT department_id, COUNT(*)
+from employee
+GROUP BY department_id
+HAVING COUNT(*)>5"
+
+
+8	Delete data from department 100		"DELETE from employee
+WHERE employee_id=100;"
+
+
+9	Find empoyee details whoes emp_name is 3 characterin length		"SELECT * from employee
+WHERE name LIKE'___';"
+
+
+10	Find the  data where salary is more than 5000 and equal to 5000		"SELECT * from employee
+WHERE sal>=5000;"
+			
+			

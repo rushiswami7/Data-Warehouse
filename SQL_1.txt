@@ -1,0 +1,68 @@
+Sr No.	Questions	What is needed?	Revision1
+1	Create an employee table with the given structure	We need employee table with columns EMP_ID, EMP_ name, EMP_surname, EMP_sal, Gender	"CREATE table employee
+(EMP_id integer,
+EMP_name varchar2(20),
+EMP_surname varchar2(25),
+EMP_sal integer,
+Gender varchar2(10))"
+
+2	Insert at least 20 records in the table		"INSERT INTO employee values (100, 'rushi','swami',48500,'M');
+INSERT INTO employee values(101, 'sushant','mane',80000,'M');
+INSERT INTO employee values(102, 'sahil','manale',500, 'M');
+INSERT INTO employee values(104, 'sayali','zarad',35000, 'F');
+INSERT INTO employee values(118, 'nikita','kulkarni',4500,'F');"
+
+3	Find all employes whoes salaey is 500		"SELECT* from employee
+WHERE EMP_sal= 500"
+
+4	Find all employes whoes name is priyanka		"SELECT* from employee
+WHERE EMP_name= 'priyanka'"
+
+5	Find all employes whoes surname is sonavane		"SELECT* from employee
+WHERE EMP_surname= 'sonavane'"
+
+6	How many employess are male and How many are female		"SELECT gender,COUNT(*) 
+from employee
+GROUP BY gender;"
+
+7	How many employess are male and How many are female.(only if count is greater than 2)		"SELECT gender,COUNT(*) 
+from employee
+GROUP BY gender
+HAVING COUNT(*)>2;"
+
+8	Find out name of employee along with employee_id for whom gender is m		"SELECT EMP_name,EMP_id from employee
+WHERE gender='M'"
+
+9	Find all details of an employee whoes ID is 101 		"SELECT * from employee
+WHERE EMP_id=101;"
+
+10	Find all the details where SAL is 1001		"SELECT * from employee
+WHERE EMP_sal=1001;"
+
+11	Select all the employess whoes name is salman or priyanka		"SELECT * from employee
+WHERE EMP_name IN('priyanka','salman');"
+
+12	Find all records whoes gender is m		"SELECT * from employee
+WHERE gender='M';"
+
+13	Find all employess whoes  name contain 'a' character in it.		"SELECT * from employee
+WHERE EMP_name LIKE '%a%';"
+
+14	Find all employee whoes name is only 2 character and it starts with 'E'		"SELECT * from employee
+WHERE EMP_name LIKE 'E_';"
+
+15	Find all the employee whoes salary is greater than 10000 and less than 50000		"SELECT * from employee
+WHERE EMP_sal between 10000 and 50000;"
+
+16	find out name of employee along with employee_id for whom gender is not available		"SELECT EMP_name,EMP_id from employee
+WHERE gender IS NULL;"
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

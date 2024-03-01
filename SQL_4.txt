@@ -1,0 +1,41 @@
+Sr no.	Questions		Answer	Revision1
+1	Statewise employee number		"select state, count(*)
+from emp
+group by state"	
+
+
+2	delete all records from table whoes name ends with 's'		"delete from emp
+where name like '%s'"	
+
+
+3	find out avg sal paid to males		"select avg(sal) from emp
+where gender='m'"
+
+
+4	Display avg sal in UP		"select avg(sal) from emp
+where state='UP'"
+
+
+5	display toatal sal of emp as per city		"select city,sum(sal) from emp
+group by city;"	
+
+
+6	define minimun sal in MP		"select min(sal) from emp
+where state='MP'"
+
+	
+7	Find avg  female sal in state MH		"select avg(sal) from emp
+where state='MH'
+and gender='f'"	
+
+
+8	find out min sal for male and female		"select gender,min(sal) from emp
+group by grnder;"
+
+	
+9	find the no. of emp as per state and city		"select city,state, count(*)
+from emp 
+group by city,state; 
+
+                                   "	
+10	Find out max sal from table		select max(sal) from employee;	SELECT max(sal) from employee;
